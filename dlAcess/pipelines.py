@@ -18,7 +18,7 @@ class DlacessPipeline(object):
         self.settings = settings
 
     def process_item(self, item, spider):
-        print(item)
+
         if spider.name == "tax":
             sqltext = self.taxInsert.format(
                 pymysql.escape_string(item['area']),
@@ -35,7 +35,6 @@ class DlacessPipeline(object):
                 pymysql.escape_string(item['issue_organ'])
             )
             self.cursor.execute(sqltext)
-
         else:
             spider.log('Undifined name: %s' % spider.name)
 

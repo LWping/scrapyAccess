@@ -1,4 +1,6 @@
-# author: wping
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+# Author:wping
 # create_time: 2020-04-01
 
 import scrapy
@@ -14,7 +16,7 @@ class TaxSpider(scrapy.Spider):
     start_url = "http://dalian.chinatax.gov.cn/module/search/index.jsp?field=field_9745:12:1,field_9746:12:1," \
                 "field_9748:12:1&i_columnid=3038&field_9745=%E8%AF%B7%E9%80%89%E6%8B%A9&field_9746=" \
                 "%E8%AF%B7%E9%80%89%E6%8B%A9&field_9748=%E8%AF%B7%E9%80%89%E6%8B%A9&currpage="
-    page_num = 1;
+    page_num = 1
 
     def parse(self, response):
         # follow links to detail pages

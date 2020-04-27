@@ -70,16 +70,20 @@ RANDOM_UA_TYPE='random'
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'dlAcess.pipelines.DlacessPipeline': 300,
+    'dlAcess.mysqlPipeline.DlacessMysqlPipeline': 300,
 }
-MYSQL_HOST = 'localhost'
-MYSQL_DBNAME = 'scrapy'
+# DOWNLOAD_DELAY = 1
+
+MYSQL_HOST = '127.0.0.1'
+MYSQL_DBNAME = 'credit'
 MYSQL_USER = 'root'
 MYSQL_PASSWD = ''
 MYSQL_PORT = 3306
 COOKIES_ENABLED = False
-#DOWNLOAD_DELAY = 3
 
+MONGODB_SERVER = '127.0.0.1'
+MONGODB_PORT = 27017
+MONGODB_DB = 'credit'
 
 
 
