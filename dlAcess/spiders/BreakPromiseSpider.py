@@ -68,10 +68,10 @@ class BreakPromiseSpider(scrapy.Spider):
                         form_data = {'zzbh': self.zzbh}
 
                         # 查询详情信息的入口请求
-                        # yield scrapy.FormRequest(self.information_url, callback=self.parse_detail,
-                        #                          method='POST',
-                        #                          headers={'Content-Type': 'application/x-www-form-urlencoded'},
-                        #                          formdata=form_data)
+                        yield scrapy.FormRequest(self.information_url, callback=self.parse_detail,
+                                                 method='POST',
+                                                 headers={'Content-Type': 'application/x-www-form-urlencoded'},
+                                                 formdata=form_data)
 
                     else:
                         item_list['have_detail'] = '否'
